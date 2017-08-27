@@ -28,7 +28,7 @@ body {
 .drop {
   width: 300px;
   height: 300px;
-  background-color: white;
+  background-color: none;
   border: 8px solid #93bddd;
   border-top: none;
   position: absolute;
@@ -42,10 +42,10 @@ body {
   }
 }
 
-#drag-element {
+#draggable-element {
 
 }
 
-#drop-element {
+#droppable-element {
 
 }
