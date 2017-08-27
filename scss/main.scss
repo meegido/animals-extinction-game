@@ -1,14 +1,51 @@
-.color {
-  color: pink;
+body {
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 }
-#drag-element {
+
+.title{
+  color: 	#f5c8c7;
+}
+
+.universe {
+  position: relative;
+}
+
+.drag {
+  width: 150px;
+  height: 150px;
+  background-color: #f6b49e;
+  position: absolute;
+  top: 250px;
+  left: 80px;
+  p {
+    padding-top: 70px;
+    color: #9d695d;
+  }
+}
+
+.drop {
   width: 300px;
-  background-color: red;
   height: 300px;
+  background-color: white;
+  border: 8px solid #93bddd;
+  border-top: none;
+  position: absolute;
+  top: 250px;
+  left: 800px;
+
+
+  p {
+    padding-top: 70px;
+    color: #b5bdc0;
+  }
+}
+
+#drag-element {
+
 }
 
 #drop-element {
-  width: 400px;
-  height: 300px;
-  background-color: black;
+
 }
