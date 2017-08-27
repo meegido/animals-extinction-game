@@ -1,13 +1,17 @@
 $(document).ready(function(){
   $( function() {
-    $( "#draggable-element" ).draggable();
+    $( "#draggable-element" ).draggable({
+      // cursor: 'move',
+      // revert: true
+    });
+
     $( "#droppable-element" ).droppable({
-      drop: function( event, ui ) {
+      drop: function() {
         $( this )
           .addClass( "ui-state-highlight" )
           .find( "p" )
-            .html( "DROPPED!" );
-      }
-    });
+            .html( "¡BIEN HECHO!" );
+        }
+      });
     });
 });
