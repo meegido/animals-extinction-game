@@ -14,16 +14,21 @@
   <body>
 
     <div class="container-fluid universe">
-      <h1 class="text-center title">Animles en extinción</h1>
-      <div class="lince text-center drag ui-widget-content">
-        <p>LINCE</p>
-      </div>
-      <div id="#leon" class=" leon text-center drag1 ui-widget-content">
-        <p>LEON</p>
-      </div>
-      <div id="droppable-element" class="text-center drop ui-widget-header">
-        <p>Métele aquí!</p>
-      </div>
+      <section class="left-boxes col-md-2">
+        <div id="extinct"></div>
+        <div id="super-danger"></div>
+      </section>
+      <section class="center-box col-md-8">
+        <h1 class="title text-center">Animales en extinción</h1>
+        <div id="animals-stack"></div>
+      </section>
+      <section class="right-boxes col-md-2">
+        <div id="no-extinct"></div>
+        <div id="danger"></div>
+      </section>
+
+
+
     </div>
 
 
@@ -32,7 +37,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="src/gameStructure.js"></script>
     <script type="text/javascript" src="src/animalsStructure.js"></script>
-    <script type="text/javascript" src="src/dropContainerStructure.js"></script>
     <script type="text/javascript" src="src/playerStructure.js"></script>
     <script type="text/javascript" src="js/game.js"></script>
 

@@ -1,4 +1,4 @@
-function Player(counterGuesses, animal, dropContainer) {
+function Player(counterGuesses) {
   this.counterGuesses = counterGuesses
 }
 

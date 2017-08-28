@@ -1,8 +1,5 @@
-var lince = new Animal("lince", "inDanger");
-var leon = new Animal("leon", "notDanger");
-var inDangerContainer = new DropContainer("inDanger");
-
-
+var game = new Game(animals);
+var player = new Player();
 
 
 $(document).ready(function(){

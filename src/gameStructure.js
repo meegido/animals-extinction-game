@@ -1,8 +1,6 @@
-function Game() {
-  this.animalLince = new Animal("Lince", "extinct", true)
-  this.animalLeon = new Anima("Leon", "noExtinct", false)
-  this.player = new Player(guesses, score),
-  this.dropContainer = new dropContainer()
+function Game(animals, player) {
+  this.player = new Player(guesses, score)
+
 }
 
 Game.prototype.startGame = function() {
