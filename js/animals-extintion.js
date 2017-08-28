@@ -1,12 +1,15 @@
 $(document).ready(function(){
   $( function() {
     $( "#draggable-element" ).draggable({
-      // cursor: 'move',
-      // revert: true
+      cursor: 'move',
+      revert: function() {
+        return true;
+      }
     });
 
     $( "#droppable-element" ).droppable({
-      drop: function() {
+      drop: function(event) {
+        console.log(event)
         $( this )
           .addClass( "ui-state-highlight" )
           .find( "p" )
