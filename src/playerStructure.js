@@ -1,13 +1,13 @@
-function Player() {
-  this.guess = guess,
+function Player(animal, dropContainer) {
+  this.counterGuesses = counterGuesses
 
 }
 
 
-Player.prototype.guesses = function() {
-
+Player.prototype.updateGuesses = function() {
+  var guessOk = game.checkCoincidence(); //un acierto es una coincidencia
 }
 
-Player.prototype.score = function() {
+Player.prototype.updateScore = function() {
 
 }
