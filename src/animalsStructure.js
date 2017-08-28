@@ -1,15 +1,7 @@
-function Animal(name, extintionStatus, isCorrect) {
-  this.name = name,
-  this.image = image,
-  this.extintionStatus = extintionStatus,
-  this.region = region,
-  this.threats = threats,
-  this.isCorrect = false;
-}
-
-
-Animal.prototype.dragAnimal = function() {
-  var linceDraggable = $(".lince");
-  var leonDraggable = $(".leon");
-//tengo que poder coger un animal o div en el dom con id dentro de la función droppable.
-}
+var animals = [
+  { name: "lince", extintionStatus: "danger", region: "spain", continent: "europe"  },
+  { name: "lemur", extintionStatus: "danger", region: "kenia", continent: "africa" },
+  { name: "gorrion", extintionStatus: "no-danger", region: "spain", continent: "europe" },
+  { name: "rinoceronte", extintionStatus: "extint", region: "kenia", continent: "africa"},
+  { name: "mono", extintionStatus: "super-danger", region: "corea", continent: "asia" }
+];
