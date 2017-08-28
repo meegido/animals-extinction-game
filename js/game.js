@@ -1,18 +1,8 @@
-var lince = new Animal;
-var tigre = new Animal;
-var dropLince = new DropContainer;
-var dropTigre = new DropContainer;
-var player1 = new Player;
-
-
 
 $(document).ready(function(){
   $( function() {
-    $( "#draggable-element" ).draggable({
-      cursor: 'move',
-      revert: function() {
-        return false;
-      }
+    $( ".leon, .lince" ).draggable({
+      cursor: 'move'
     });
 
     $( "#droppable-element" ).droppable({
@@ -28,6 +18,6 @@ $(document).ready(function(){
 });
 
 //Esta comprobación va al final de cada drag
-// Game.prototype.checkCoincidence = function(animal, container) {
+// Animal.prototype.checkCoincidence = function(animal, dropContainer) {
 //   return animalLince.extintionStatus === container1.categoryStatus
 // }

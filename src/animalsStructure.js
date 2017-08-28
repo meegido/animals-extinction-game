@@ -1,4 +1,4 @@
-function Animal() {
+function Animal(name, extintionStatus, isCorrect) {
   this.name = name,
   this.image = image,
   this.extintionStatus = extintionStatus,
@@ -9,5 +9,7 @@ function Animal() {
 
 
 Animal.prototype.dragAnimal = function() {
-//tento que poder coger un animal o div en el dom con id dentro de la función droppable.
+  var linceDraggable = $(".lince");
+  var leonDraggable = $(".leon");
+//tengo que poder coger un animal o div en el dom con id dentro de la función droppable.
 }

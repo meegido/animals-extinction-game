@@ -1,9 +1,9 @@
-function DropContainer(animal) {
+function DropContainer(animal, extintionCategory) {
   this.extintionCategory = extintionCategory,
   this.quantityInside = quantityInside
 }
 
 
-Container.prototype.acceptAnimal = function(animal) {
-
+DropContainer.prototype.acceptAnimal = function(animal) {
+  var containerDropable = $("#droppable-element")
 }

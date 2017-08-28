@@ -1,6 +1,5 @@
-function Player(animal, dropContainer) {
+function Player(counterGuesses, animal, dropContainer) {
   this.counterGuesses = counterGuesses
-
 }
 
 
@@ -9,5 +8,5 @@ Player.prototype.updateGuesses = function() {
 }
 
 Player.prototype.updateScore = function() {
-
+  this.counterGuesses += updateGuesses()
 }
