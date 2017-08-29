@@ -16,37 +16,41 @@ Game.prototype.addPile = function(animals) {
       revert: true
     } );
   }
-  console.log("done");
 }
 
 Game.prototype.addDrops = function() {
-var extinctionDrop1 = [ "danger", "no-danger"];
-
-  for( var i = 0; i < extinctionDrop1.length; i++ ) {
-    $('<div>' + extinctionDrop1[i] + '</div>').data( 'drop', i ).attr( 'id', 'drop-'+ extinctionDrop1[i] ).appendTo( '#cardSlots1' ).droppable( {
-      accept: '#content div',
-      hoverClass: 'hovered',
-      //drop: handleCardDrop
-    } );
-  }
-
+  var extinctionDrop1 = ["danger", "no-danger"];
   var extinctionDrop2 = ["extinct", "super"];
-  for( var i = 0; i < extinctionDrop2.length; i++ ) {
-    $('<div>' + extinctionDrop2[i] + '</div>').data( 'drop', i ).attr( 'id', 'drop-'+ extinctionDrop2[i] ).appendTo( '#cardSlots2' ).droppable( {
-      accept: '#content div',
-      hoverClass: 'hovered',
-      //drop: handleCardDrop
-    } );
+
+    for( var i = 0; i < extinctionDrop1.length; i++ ) {
+      console.log(i);
+      $('<div>' + extinctionDrop1[i] + '</div>').data( 'drop', i ).attr( 'id', 'drop-'+ extinctionDrop1[i] ).appendTo( '#cardSlots1' ).droppable( {
+        accept: '#content div',
+        hoverClass: 'hovered',
+        //drop: handleCardDrop
+      });
+    }
+
+
+
+    for( var j = 0; j < extinctionDrop2.length; j++ ) {
+      console.log(j);
+      $('<div>' + extinctionDrop2[j] + '</div>').data( 'slot', j ).attr( 'id', 'slot-'+ extinctionDrop2[j] ).appendTo( '#cardSlots2' ).droppable( {
+        accept: '#content div',
+        hoverClass: 'hovered',
+        //drop: handleCardDrop
+      });
+    }
+
   }
-    console.log("done");
-}
 
 
 Game.prototype.startGame = function(animal) {
   //return animal.extintionStatus;
   correctCards = 0;
   $('#cardPile').html( '' );
-  $('#cardSlots').html( '' );
+  $('#cardSlots1').html( '' );
+  $('#cardSlots2').html( '' );
 
   this.addPile(animals);
   this.addDrops();
