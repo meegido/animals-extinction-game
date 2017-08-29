@@ -45,18 +45,25 @@ var extinctionDrop = [ "extinct", "super-danger", "danger", "no-danger"  ];
 function handleCardDrop(event, ui) {
   var slotBoxNumber = $(this).data( 'number' );
   var animalCardNumber = ui.draggable.data( 'number' );
-  correctCards = 0;
 
-  if ( slotBoxNumber === animalCardNumber ) {
-      ui.draggable.addClass( 'correct' );
-      ui.draggable.draggable( 'disable' );
+  console.log(ui)
+  if(slotBoxNumber === animalCardNumber) {
+    correctCards = 0;
 
-      $(this).droppable( 'disable' );
+      ui.draggable.addClass('correct');
+      ui.draggable.draggable('disable');
 
-      ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
-      ui.draggable.draggable( 'option', 'revert', false );
+      //con disable desactivado en el droppable, puedo meter los que quiera
+      //$(this).droppable('disable');
 
-      correctCards++;
+      //con this.animal[i] puedo meterlos
+      //(porque creo que hace un top y left para cada uno)
+      //y no se solapan pero no pilla el scope de animal y da error de consola.
+      ui.draggable.position( { of: $(this.animal[i]), my: 'left top', at: 'left top' } );
+
+      ui.draggable.draggable('option', 'revert', false);
+
+      correctCards ++;
     }
 }
 
@@ -69,6 +76,7 @@ Game.prototype.startGame = function(animal) {
 
   this.addAnimalsPile(animals);
   this.addDrops();
+handleCardDrop(event, ui);
 
 
 
