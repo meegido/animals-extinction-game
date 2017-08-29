@@ -1,49 +1,69 @@
 body {
-  margin: 0 auto;
+  margin: 30px;
   font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  line-height: 1.8em;
+  color: pink;
 }
 
-.title{
-  color: 	#f5c8c7;
+#content {
+  margin: 80px 70px;
+  text-align: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-.universe {
-  position: relative;
+#cardSlots {
+  margin: 50px auto 0 auto;
+  background: #ddf;
 }
 
-.left-boxes {
-  background-color: red;
+/* The initial pile of unsorted cards */
+
+#cardPile {
+  margin: 0 auto;
+  background: #ffd;
 }
 
-.right-boxes {
-  background-color: red;
+
+#cardPile div {
+
+  color: pink;
+  font-size: 16px;
 }
 
-.center-box {
-  
+#cardPile div {
+  float: left;
+  width: 58px;
+  height: 78px;
+  padding: 10px;
+  padding-top: 40px;
+  padding-bottom: 0;
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  margin: 0 0 0 10px;
+  background: #fff;
 }
 
-.ui-state-highlight {
-  border-color: #FFA500;
-}
 
 #extinct {
   height: 348px;
-  border: 1px solid white;
+  border: 1px solid red;
 }
 
 #super-danger {
   height: 348px;
-  border: 1px solid white;
+  border: 1px solid red;
 }
 
 #no-extinct {
   height: 348px;
-  border: 1px solid white;
+  border: 1px solid red;
 }
 
 #danger {
   height: 348px;
-  border: 1px solid white;
+  border: 1px solid red;
 }
