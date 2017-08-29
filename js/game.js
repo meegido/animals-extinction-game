@@ -4,47 +4,70 @@ function Game(animals, player) {
 }
 
 
-Game.prototype.addPile = function(animals) {
+Game.prototype.addAnimalsPile = function(animals) {
   animals.sort( function() { return Math.random() - .5 } );
-  console.log(this.animals);
+
 
   for( var i = 1; i < this.animals.length; i++ ) {
     var grades = Math.random() * 45;
 
     $('<div>' + this.animals[i].name + '</div>')
-    .data( 'animal', this.animals[i].name )
-    .attr( 'id', 'animal-'+ this.animals[i].name )
-    .appendTo( '#cardPile' )
-    .draggable( {
-      containment: '#universe',
-      stack: '#cardPile div',
-      cursor: 'move',
-      revert: true
-    } );
+      .data( 'animal', this.animals[i].checkControl )
+      .attr( 'id', 'animal-'+ this.animals[i].name )
+      .appendTo( '#cardPile' )
+      .draggable( {
+        containment: '#universe',
+        stack: '#cardPile div',
+        cursor: 'move',
+        revert: true
+      } );
   }
-  console.log("done");
+
 }
 
 Game.prototype.addDrops = function() {
-var extinctionDrop = [ "danger", "no-danger", "extinct", "super" ];
+var extinctionDrop = [ "extinct", "super-danger", "danger", "no-danger"  ];
 
   for( var i = 0; i < extinctionDrop.length; i++ ) {
-    $('<div>' + extinctionDrop[i] + '</div>').data( 'number', i ).attr( 'class', 'col-md-3' ).appendTo( '#cardSlots' ).droppable( {
+    $('<div>' + extinctionDrop[i] + '</div>')
+      .data( 'dropBox', i )
+      .attr( 'class', 'col-md-3' )
+      .appendTo( '#cardSlots' )
+      .droppable( {
       accept: '#cardPile div',
       hoverClass: 'hovered',
-      //drop: handleCardDrop
+      drop: handleCardDrop
     } );
+
   }
+}
+
+function handleCardDrop(event, ui) {
+  var slotBoxNumber = $(this).data( 'number' );
+  var animalCardNumber = ui.draggable.data( 'number' );
+  correctCards = 0;
+
+  if ( slotBoxNumber === animalCardNumber ) {
+      ui.draggable.addClass( 'correct' );
+      ui.draggable.draggable( 'disable' );
+
+      $(this).droppable( 'disable' );
+
+      ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
+      ui.draggable.draggable( 'option', 'revert', false );
+
+      correctCards++;
+    }
 }
 
 
 Game.prototype.startGame = function(animal) {
   //return animal.extintionStatus;
-  correctCards = 0;
+
   $('#cardPile').html( '' );
   $('#cardSlots').html( '' );
 
-  this.addPile(animals);
+  this.addAnimalsPile(animals);
   this.addDrops();
 
 
