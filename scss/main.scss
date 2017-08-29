@@ -1,5 +1,5 @@
 body {
-  margin: 30px;
+  margin: 0 auto;
   font-family: 'Roboto', sans-serif;
   line-height: 1.8em;
   color: pink;
@@ -15,55 +15,32 @@ body {
 
 #cardSlots {
   margin: 50px auto 0 auto;
-  background: #ddf;
+  div {
+    height: 250px;
+    text-align: center;
+    border: 10px solid white;
+      background: #ddf;
+  }
 }
 
 /* The initial pile of unsorted cards */
 
 #cardPile {
-  margin: 0 auto;
-  background: #ffd;
-}
 
-
-#cardPile div {
-
-  color: pink;
-  font-size: 16px;
 }
 
 #cardPile div {
   float: left;
-  width: 58px;
-  height: 78px;
+  width: 100px;
+  height: 100px;
   padding: 10px;
   padding-top: 40px;
   padding-bottom: 0;
-  border: 2px solid #333;
+  border: 2px solid black;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
-  border-radius: 10px;
+  font-size: 16px;
   margin: 0 0 0 10px;
-  background: #fff;
-}
-
-
-#extinct {
-  height: 348px;
-  border: 1px solid red;
-}
-
-#super-danger {
-  height: 348px;
-  border: 1px solid red;
-}
-
-#no-extinct {
-  height: 348px;
-  border: 1px solid red;
-}
-
-#danger {
-  height: 348px;
-  border: 1px solid red;
+  background: coral;
+  transform: translateX(10px) rotate(10deg) translateY(5px);
 }
