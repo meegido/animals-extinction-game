@@ -1,11 +1,12 @@
-function Game(animals, player) {
+function Game(animals, player, cards) {
   this.animals = animals;
   this.player = player;
   this.cards = cards;
 }
 
 
-Game.prototype.startGame = function(animal) {
+
+Game.prototype.startGame = function(animals, cards) {
   //return animal.extintionStatus;
 
   $('#cardPile').html( '' );
@@ -13,9 +14,6 @@ Game.prototype.startGame = function(animal) {
 
   cards.addAnimalsPile(animals);
   cards.addDrops();
-  cards.handleCardDrop(event, ui);
-
-
 
 }
 
