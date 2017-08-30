@@ -42,8 +42,6 @@ Cards.prototype.addDrops = function(extinctionDrop) {
 
 
 Cards.prototype.handleCardDrop = function(event, ui) {
-//console.log(event,ui);
-
   var slotBoxNumber = $(this).data( 'dropBox' );
   var animalCardNumber = ui.draggable.data( 'animal' );
 
@@ -54,7 +52,6 @@ Cards.prototype.handleCardDrop = function(event, ui) {
       ui.draggable.addClass('correct');
       ui.draggable.draggable('disable');
 
-      $(this).droppable( 'disable' );
 
       ui.draggable.position( {
         of: $(this.animals),

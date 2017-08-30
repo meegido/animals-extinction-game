@@ -2,7 +2,7 @@ var animals = [
   { name: "lince", extintionStatus: "danger"  },
   { name: "lemur", extintionStatus: "danger" },
   { name: "gorrion", extintionStatus: "no-danger" },
-  { name: "rinoceronte", extintionStatus: "extint" },
+  { name: "rinoceronte", extintionStatus: "extinct" },
   { name: "mono", extintionStatus: "super-danger" },
   { name: "elefante", extintionStatus: "super-danger" },
   { name: "tortuga", extintionStatus: "no-danger" },
