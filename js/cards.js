@@ -7,8 +7,8 @@ function Cards(animals, extinctionDrop) {
 Cards.prototype.addAnimalsPile = function(animals) {
   animals.sort( function() { return Math.random() - .5 } );
 
-  for( var i = 1; i < this.animals.length; i++ ) {
-    var grades = Math.random() * 45;
+  for( var i = 0; i < this.animals.length; i++ ) {
+
 
     $('<div>' + this.animals[i].name + '</div>')
       .data( 'animal', this.animals[i].extintionStatus )
