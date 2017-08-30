@@ -1,6 +1,7 @@
-function Cards(animals, extinctionDrop) {
+function Cards(animals, extinctionDrop, countCorrectCards) {
   this.animals = animals;
   this.extinctionDrop = ["extinct", "super-danger", "danger", "no-danger"];
+  this.countCorrectCards = countCorrectCards;
 }
 
 // Pintamos cartas de animales
@@ -18,7 +19,8 @@ Cards.prototype.addAnimalsPile = function(animals) {
         containment: '#universe',
         stack: '#cardPile div',
         cursor: 'move',
-        revert: true
+        revert: true,
+        scope: this.animals[i].extintionStatus
       } );
   }
 
@@ -33,6 +35,7 @@ Cards.prototype.addDrops = function(extinctionDrop) {
       .appendTo( '#cardSlots' )
       .droppable( {
       accept: '#cardPile div',
+      scope: this.extinctionDrop[i],
       hoverClass: 'hovered',
       drop: this.handleCardDrop
     } );
@@ -52,15 +55,16 @@ Cards.prototype.handleCardDrop = function(event, ui) {
       ui.draggable.addClass('correct');
       ui.draggable.draggable('disable');
 
-
+console.log(this)
       ui.draggable.position( {
-        of: $(this.animals),
         my: 'left top',
         at: 'left top' }
       );
 
       ui.draggable.draggable('option', 'revert', false);
 
-      correctCards ++;
+      console.log(player);
+
     }
+
 }

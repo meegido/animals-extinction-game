@@ -7,20 +7,14 @@ function Game(animals, player, cards) {
 
 
 Game.prototype.startGame = function(animals, cards) {
-  //return animal.extintionStatus;
 
   $('#cardPile').html( '' );
   $('#cardSlots').html( '' );
 
   cards.addAnimalsPile(animals);
   cards.addDrops();
-
 }
 
 Game.prototype.reStart = function() {
 
-}
-
-Game.prototype.checkCoincidence = function() {
-  return animal.extintionStatus === true
 }

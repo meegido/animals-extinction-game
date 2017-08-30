@@ -1,11 +1,11 @@
-function Player(counterGuesses) {
-  this.counterGuesses = counterGuesses;
+function Player(animal, cards) {
+  this.animals = animals;
+  this.cards = cards;
+  this.score = 0;
 }
 
-Player.prototype.updateGuesses = function() {
-  var guessOk = game.checkCoincidence(); //un acierto es una coincidencia
-}
-
-Player.prototype.updateScore = function() {
-  this.counterGuesses += updateGuesses();
+Player.prototype.countCorrectCards = function() {
+  this.score += 1;
+  console.log(this.score);
+  
 }
