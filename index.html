@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/text/css" href="./jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500" rel="stylesheet">
     <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="./jquery-ui/jquery-ui.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -18,10 +18,15 @@
   <body>
 
     <div id="universe" class="container-fluid universe">
-      <div class="info text-center col-md-12">
-        <h1 class="title">Peligro de extinción</h1>
-        <p>Coloca los animales en la caja que les corresponde</p>
-      </div>
+      <section class="info text-center col-md-12">
+        <article class="header col-md-10">
+          <h1 class="title">Peligro de extinción</h1>
+          <p>Coloca los animales en la caja que les corresponde</p>
+        </article>
+        <article class="col-md-2">
+          <div id="#score"></div>
+        </article>
+      </section>
       <div id="cardPile" class="col-md-6 col-md-offset-3"> </div>
       <div id="cardSlots" class="col-md-12"> </div>
 

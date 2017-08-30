@@ -10,7 +10,7 @@ Cards.prototype.addAnimalsPile = function(animals) {
 
   for( var i = 0; i < this.animals.length; i++ ) {
 
-
+//cuando genero el draggable le meto el background que cojo de las propiedades de animal
     $('<div>' + this.animals[i].name + '</div>')
       .data( 'animal', this.animals[i].extintionStatus )
       .attr( 'id', 'animal-'+ this.animals[i].name )
@@ -63,8 +63,8 @@ console.log(this)
 
       ui.draggable.draggable('option', 'revert', false);
 
-      console.log(player);
-
+      player.countCorrectCards()
+        // llamar a la función de count...,
     }
 
 }
