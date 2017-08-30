@@ -8,19 +8,18 @@ function Game(animals, player, cards, score) {
 
 
 Game.prototype.startGame = function(animals, cards) {
-
-  $('#cardPile').html( '' );
-  $('#cardSlots').html( '' );
+  // $('#cardPile').html( '' );
+  // $('#cardSlots').html( '' );
 
   cards.addAnimalsPile(animals);
   cards.addDrops();
   this.showScore();
 }
 
-Game.prototype.reStart = function() {
-
-}
-
 Game.prototype.showScore = function(score) {
   $("#score").text(player.score)
+}
+
+Game.prototype.reStart = function() {
+
 }
