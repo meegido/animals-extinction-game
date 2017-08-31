@@ -1,6 +1,6 @@
 function Cards(animals, extinctionDrop, countCorrectCards) {
   this.animals = animals;
-  this.extinctionDrop = ["extinct", "super-danger", "danger", "no-danger"];
+  this.extinctionDrop = ["extinguidos", "peligro-exincion", "amenazados", "casi-amenazados"];
   this.countCorrectCards = countCorrectCards;
 }
 

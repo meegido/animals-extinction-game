@@ -1,14 +1,14 @@
 var animals = [
-  { name: "lince", extintionStatus: "danger"  },
-  { name: "lemur", extintionStatus: "danger" },
-  { name: "gorrion", extintionStatus: "no-danger" },
-  { name: "rinoceronte", extintionStatus: "extinct" },
-  { name: "mono", extintionStatus: "super-danger" },
-  { name: "elefante", extintionStatus: "super-danger" },
-  { name: "tortuga", extintionStatus: "no-danger" },
-  { name: "dinosaurio", extintionStatus: "extinct" },
-  { name: "hormiga", extintionStatus: "no-danger" },
-  { name: "orangutan", extintionStatus: "danger" },
-  { name: "libelula", extintionStatus: "extinct" },
-  { name: "aveja", extintionStatus: "super-danger" }
+  { name: "lince", extintionStatus: "amenazados", image: "./lince-AM.png"  },
+  { name: "lemur", extintionStatus: "amenazados" },
+  { name: "gorrion", extintionStatus: "casi-amenazados" },
+  { name: "rinoceronte", extintionStatus: "extinguidos" },
+  { name: "mono", extintionStatus: "peligro-extincion" },
+  { name: "elefante", extintionStatus: "peligro-extincion" },
+  { name: "tortuga", extintionStatus: "casi-amenazados" },
+  { name: "dinosaurio", extintionStatus: "extinguidos" },
+  { name: "hormiga", extintionStatus: "casi-amenazados" },
+  { name: "orangutan", extintionStatus: "amenazados" },
+  { name: "libelula", extintionStatus: "extinguidos" },
+  { name: "aveja", extintionStatus: "peligro-extincion" }
 ];
