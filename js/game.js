@@ -10,7 +10,7 @@ Game.prototype.startGame = function(animals, cards) {
   cards.addAnimalsPile(animals);
   cards.addDrops();
   this.showScore();
-  this.countDown();
+  this.showTimmer();
 }
 
 Game.prototype.showScore = function() {
@@ -22,14 +22,15 @@ Game.prototype.countDown = function() {
   var timmer = setInterval(function(){
     that.count--;
     if(that.count <= 0) clearInterval(timmer)
-    that.render();
+    that.showTimmer();
   }, 1000)
 }
 
-Game.prototype.render = function() {
+Game.prototype.showTimmer = function() {
   $("#timmerDown").text(this.count)
 }
 
 Game.prototype.reStart = function(count) {
+
 
 }

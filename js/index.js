@@ -5,4 +5,11 @@ var game = new Game(animals, player, cards, player.score);
 
 $(document).ready(function(){
   game.startGame(animals, cards);
+
+  $('.start').on('click', function() {
+    
+    game.countDown();
+
+  })
+
 });
