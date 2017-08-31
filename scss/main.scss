@@ -15,7 +15,7 @@ body {
 }
 
 #cardPile {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 #cardPile div {
@@ -30,6 +30,12 @@ body {
   -webkit-border-radius: 10px;
   font-size: 16px;
   transform: translateX(10px) rotate(10deg) translateY(5px);
+}
+
+#cardPile p {
+  padding-top: 116px;
+  padding-left: 4px;
+  text-transform: uppercase;
 }
 
 #cardSlots {

@@ -11,7 +11,7 @@ Cards.prototype.addAnimalsPile = function(animals) {
   for( var i = 0; i < this.animals.length; i++ ) {
 
 //cuando genero el draggable le meto el background que cojo de las propiedades de animal
-    $('<div>' + this.animals[i].name + '</div>')
+    $('<div>' + '<p>' + this.animals[i].name + '</p>' + '</div>')
       .data( 'animal', this.animals[i].extintionStatus )
       .attr( 'id', 'animal-'+ this.animals[i].name )
       .appendTo( '#cardPile' )
