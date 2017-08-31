@@ -7,5 +7,4 @@ function Player(animal, cards, score) {
 Player.prototype.countCorrectCards = function() {
   console.log(this.score);
   this.score += 1;
-
 }

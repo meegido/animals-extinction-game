@@ -6,10 +6,7 @@ function Game(animals, player, cards, score) {
   this.count = 10;
 }
 
-
-
 Game.prototype.startGame = function(animals, cards) {
-
   cards.addAnimalsPile(animals);
   cards.addDrops();
   this.showScore();
@@ -20,23 +17,17 @@ Game.prototype.showScore = function() {
   $("#score").text(player.score)
 }
 
-
 Game.prototype.countDown = function() {
   var that = this;
   var timmer = setInterval(function(){
-    console.log(that.count)
-    that.count--
-    if(that.count < 0) {
-      clearInterval(timmer)
-    }
+    that.count--;
+    if(that.count <= 0) clearInterval(timmer)
+    that.render();
   }, 1000)
-
-  //llamo aquí a render para pintar la cuenta atrás
 }
 
-
 Game.prototype.render = function() {
-  
+  $("#timmerDown").text(this.count)
 }
 
 Game.prototype.reStart = function(count) {
