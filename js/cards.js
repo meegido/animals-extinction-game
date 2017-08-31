@@ -1,6 +1,6 @@
 function Cards(animals, extinctionDrop, countCorrectCards) {
   this.animals = animals;
-  this.extinctionDrop = ["extinguidos", "peligro-exincion", "amenazados", "casi-amenazados"];
+  this.extinctionDrop = ["extinguidos", "peligro-extincion", "amenazados", "casi-amenazados"];
   this.countCorrectCards = countCorrectCards;
 }
 
@@ -63,8 +63,8 @@ console.log(this)
 
       ui.draggable.draggable('option', 'revert', false);
 
-      player.countCorrectCards()
-        // llamar a la función de count...,
+      player.countCorrectCards();
+      game.showScore();
     }
 
 }
