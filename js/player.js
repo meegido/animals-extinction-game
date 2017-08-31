@@ -9,20 +9,14 @@ function Player(animal, cards, score, game) {
 
 Player.prototype.countCorrectCards = function() {
   this.score += 1;
-  if(this.score == 10 ) {
-    win()
-  } else if (this.score < 0) {
-    loose()
-  }
-
 }
 
 
 function win() {
-  console.log("hola")
-      $('#cardPile').css('background', 'red')
+    $('#cardPile').css('background', 'red')
 }
 
 function loose() {
-  
+  if(this.count <= 0)
+  $('#cardPile').css('background', 'black')
 }

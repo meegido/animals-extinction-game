@@ -1,6 +1,6 @@
 function Cards(animals, extinctionDrop, countCorrectCards) {
   this.animals = animals;
-  this.extinctionDrop = ["extinguidos", "peligro-extincion", "amenazados", "casi-amenazados"];
+  this.extinctionDrop = ["extinguido", "en-peligro", "vulnerable", "riesgo-bajo"];
   this.countCorrectCards = countCorrectCards;
 }
 
@@ -16,7 +16,8 @@ Cards.prototype.addAnimalsPile = function(animals) {
       .attr( 'id', 'animal-'+ this.animals[i].name )
       .appendTo( '#cardPile' )
       .css("background-image","url("+ this.animals[i].image +")")
-      .css("background-size", "cover")
+      .css("background-size", "contain")
+      .css('background-repeat', 'no-repeat')
       .draggable( {
         containment: '#universe',
         stack: '#cardPile div',
