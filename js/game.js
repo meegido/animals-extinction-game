@@ -24,13 +24,9 @@ Game.prototype.countDown = function() {
     if(that.count <= 0) clearInterval(timmer)
     that.showTimmer();
   }, 1000)
+  this.count = 11;
 }
 
 Game.prototype.showTimmer = function() {
   $("#timmerDown").text(this.count)
-}
-
-Game.prototype.reStart = function(count) {
-
-
 }

@@ -8,7 +8,7 @@ function Cards(animals, extinctionDrop, countCorrectCards) {
 Cards.prototype.addAnimalsPile = function(animals) {
   animals.sort( function() { return Math.random() - .5 } );
 
-  for( var i = 0; i < this.animals.length; i++ ) {
+  for( var i = 1; i < this.animals.length; i++ ) {
 
 //cuando genero el draggable le meto el background que cojo de las propiedades de animal
     $('<div>' + '<p>' + this.animals[i].name + '</p>' + '</div>')
@@ -56,7 +56,7 @@ Cards.prototype.handleCardDrop = function(event, ui) {
       ui.draggable.addClass('correct');
       ui.draggable.draggable('disable');
 
-console.log(this)
+
       ui.draggable.position( {
         my: 'left top',
         at: 'left top' }

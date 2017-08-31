@@ -6,7 +6,7 @@ var animals = [
   { name: "oso-panda", extintionStatus: "peligro-extincion", image: "images/oso-panda-gigante-AM.png" },
   { name: "elefante", extintionStatus: "peligro-extincion" },
   { name: "tortuga", extintionStatus: "casi-amenazados" },
-  { name: "dinosaurio", extintionStatus: "extinguidos" },
+
   { name: "hormiga", extintionStatus: "casi-amenazados" },
   { name: "orangutan", extintionStatus: "amenazados" },
   { name: "libelula", extintionStatus: "extinguidos" },
