@@ -3,7 +3,7 @@ function Game(animals, player, cards, score) {
   this.player = player;
   this.cards = cards;
   this.score = score;
-  this.count = 10;
+  this.count = 100;
 }
 
 Game.prototype.startGame = function(animals, cards) {
@@ -24,7 +24,7 @@ Game.prototype.countDown = function() {
     if(that.count <= 0) clearInterval(timmer)
     that.showTimmer();
   }, 1000)
-  this.count = 11;
+  this.count = 101;
 }
 
 Game.prototype.showTimmer = function() {
