@@ -15,6 +15,7 @@ Cards.prototype.addAnimalsPile = function(animals) {
       .data( 'animal', this.animals[i].extintionStatus )
       .attr( 'id', 'animal-'+ this.animals[i].name )
       .appendTo( '#cardPile' )
+      .css("background-image","url("+ this.animals[i].image +")")
       .draggable( {
         containment: '#universe',
         stack: '#cardPile div',
@@ -23,7 +24,6 @@ Cards.prototype.addAnimalsPile = function(animals) {
         scope: this.animals[i].extintionStatus
       } );
   }
-
 }
 
 // Pintamos cajas donde metemos animales

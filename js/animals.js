@@ -1,5 +1,5 @@
 var animals = [
-  { name: "lince", extintionStatus: "amenazados", image: "./lince-AM.png"  },
+  { name: "lince", extintionStatus: "amenazados", image: "images/lince-AM.png"  },
   { name: "lemur", extintionStatus: "amenazados" },
   { name: "gorrion", extintionStatus: "casi-amenazados" },
   { name: "rinoceronte", extintionStatus: "extinguidos" },
