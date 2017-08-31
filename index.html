@@ -18,22 +18,28 @@
   <body>
 
     <div id="universe" class="container-fluid universe">
-      <section class="info text-center col-md-12">
-        <article class="header col-md-10">
-          <h1 class="title">Peligro de extinción</h1>
-          <p>Coloca los animales en la caja que les corresponde</p>
+
+      <section class="col-md-10">
+        <div id="cardPile" class="col-md-10 col-md-offset-1"> </div>
+        <div id="cardSlots" class="col-md-12"> </div>
+      </section>
+      <section class="col-md-2 text-center">
+        <article>
+          <h1>NIVEL DE EXTINCIÓN</h1>
+          <p>Cómo jugar</p>
+          <p>"Lorizzle ipsum bling bling sit amizzle, consectetuer adipiscing elit. Nizzle sapien velizzle !"</p>
         </article>
-        <article class="col-md-2">
-          <div>
-            <p id="score">0</p>
-          </div>
+        <article class="countDown">
+          <p>TIEMPO</p>
+        </article>
+        <article class="">
+          <p id="score">0</p>
+          <p>ACIERTOS</p>
         </article>
       </section>
-      <div id="cardPile" class="col-md-10 col-md-offset-1"> </div>
-      <div id="cardSlots" class="col-md-12"> </div>
 
     </div>
-    
+
     <script type="text/javascript" src="js/player.js"></script>
     <script type="text/javascript" src="js/cards.js"></script>
     <script type="text/javascript" src="js/game.js"></script>
