@@ -16,6 +16,7 @@ Cards.prototype.addAnimalsPile = function(animals) {
       .attr( 'id', 'animal-'+ this.animals[i].name )
       .appendTo( '#cardPile' )
       .css("background-image","url("+ this.animals[i].image +")")
+      .css("background-size", "cover")
       .draggable( {
         containment: '#universe',
         stack: '#cardPile div',

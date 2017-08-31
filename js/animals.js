@@ -3,12 +3,12 @@ var animals = [
   { name: "lemur", extintionStatus: "amenazados" },
   { name: "gorrion", extintionStatus: "casi-amenazados" },
   { name: "rinoceronte", extintionStatus: "extinguidos" },
-  { name: "mono", extintionStatus: "peligro-extincion" },
+  { name: "oso-panda", extintionStatus: "peligro-extincion", image: "images/oso-panda-gigante-AM.png" },
   { name: "elefante", extintionStatus: "peligro-extincion" },
   { name: "tortuga", extintionStatus: "casi-amenazados" },
   { name: "dinosaurio", extintionStatus: "extinguidos" },
   { name: "hormiga", extintionStatus: "casi-amenazados" },
   { name: "orangutan", extintionStatus: "amenazados" },
   { name: "libelula", extintionStatus: "extinguidos" },
-  { name: "aveja", extintionStatus: "peligro-extincion" }
+  { name: "abeja", extintionStatus: "peligro-extincion" }
 ];
