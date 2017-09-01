@@ -16,7 +16,7 @@ function Player(animal, cards, score, game) {
 //     $('#cardPile').css('background', 'red')
 // }
 
-function loose() {
-  if(this.count <= 0)
-  $('#cardPile').css('background', 'black')
-}
+// function loose() {
+//   if(this.count <= 0)
+//   $('#cardPile').css('background', 'black')
+// }

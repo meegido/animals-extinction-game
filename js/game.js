@@ -15,6 +15,7 @@ Game.prototype.startGame = function(animals, cards) {
 
 Game.prototype.showScore = function() {
   $("#score").text(this.score)
+  console.log(this.score);
 }
 
 Game.prototype.countDown = function() {
@@ -28,16 +29,24 @@ Game.prototype.countDown = function() {
   this.count = 31;
 }
 
+Game.prototype.countCorrectCards = function() {
+  this.score += 1;
+}
 
 Game.prototype.showTimmer = function() {
   $("#timmerDown").text(this.count)
 }
 
-Game.prototype.win = function () {
-  console.log(this.score);
-  console.log("holi");
+Game.prototype.win = function() {
+  if(this.score === 10) {
+     $('#cardPile').css('background', 'red')
+  }
+  console.log(this.count);
+  if(this.count <= 0){
+    $('#cardPile').css('background', 'blue')
+  }
 }
 
-Game.prototype.countCorrectCards = function() {
-  this.score += 1;
+Game.prototype.loose = function() {
+
 }

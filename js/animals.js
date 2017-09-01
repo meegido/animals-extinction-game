@@ -1,5 +1,5 @@
 var animals = [
-  { name: "lince", extintionStatus: "riesgo-bajo", image: "images/lince-AM.png"  },
+  { name: "lince", extintionStatus: "en-peligro", image: "images/lince-AM.png"  },
   { name: "rata", extintionStatus: "riesgo-bajo", image: "images/rata-arborea-casi.png" },
   //{ name: "gorrion", extintionStatus: "vulnerable" },
   { name: "sapo-dorado", extintionStatus: "extinguido", image: "images/sapo-dorado-ex.png"},

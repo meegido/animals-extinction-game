@@ -7,6 +7,7 @@ $(document).ready(function(){
   game.startGame(animals, cards);
   $('.start').on('click', function() {
     game.countDown();
+    game.win();
   });
 
 });
