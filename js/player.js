@@ -7,14 +7,14 @@ function Player(animal, cards, score, game) {
 
 }
 
-Player.prototype.countCorrectCards = function() {
-  this.score += 1;
-}
+// Player.prototype.countCorrectCards = function() {
+//   this.score += 1;
+// }
 
 
-function win() {
-    $('#cardPile').css('background', 'red')
-}
+// function win() {
+//     $('#cardPile').css('background', 'red')
+// }
 
 function loose() {
   if(this.count <= 0)

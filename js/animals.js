@@ -8,8 +8,6 @@ var animals = [
   //{ name: "elefante", extintionStatus: "en-peligro" },
   { name: "panda", extintionStatus: "vulnerable", image: "images/oso-panda-gigante-AM.png" },
   { name: "mariquita", extintionStatus: "riesgo-bajo", image: "images/mariquita-PM.png" },
-
-
   //{ name: "hormiga", extintionStatus: "vulnerable" },
   { name: "anchoa", extintionStatus: "riesgo-bajo", image: "images/achoa-casi.png" },
   { name: "dodo", extintionStatus: "extinguido", image: "images/dodo-ex.png"},

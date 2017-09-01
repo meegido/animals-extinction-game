@@ -1,7 +1,9 @@
-function Cards(animals, extinctionDrop, countCorrectCards) {
+function Cards(animals, extinctionDrop, countCorrectCards, game, score) {
   this.animals = animals;
   this.extinctionDrop = ["extinguido", "en-peligro", "vulnerable", "riesgo-bajo"];
   this.countCorrectCards = countCorrectCards;
+  this.game = game;
+  this.score = score;
 }
 
 // Pintamos cartas de animales
@@ -57,16 +59,13 @@ Cards.prototype.handleCardDrop = function(event, ui) {
   if(slotBoxNumber == animalCardNumber) {
       ui.draggable.addClass('correct');
       ui.draggable.draggable('disable');
-
-
       ui.draggable.position( {
         my: 'left top',
         at: 'left top' }
       );
-
       ui.draggable.draggable('option', 'revert', false);
 
-      player.countCorrectCards();
+      game.countCorrectCards();
       game.showScore();
     }
 
