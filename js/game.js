@@ -38,12 +38,12 @@ Game.prototype.showTimmer = function() {
 
 Game.prototype.win = function() {
   if(this.score === 10) {
-     $('#cardPile').addClass('win').text("GANASTE!")
+     $('#cardPile').addClass('win').text('')
 
   }
   console.log(this.count);
   if(this.count === 1){
-    $('#cardPile').addClass('loose')
+    $('#cardPile').addClass('loose').text('')
   }
 }
 
