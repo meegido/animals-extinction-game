@@ -10,9 +10,7 @@ function Cards(animals, extinctionDrop, countCorrectCards, game, score) {
 Cards.prototype.addAnimalsPile = function(animals) {
   animals.sort( function() { return Math.random() - .5 } );
 
-  for( var i = 1; i < this.animals.length; i++ ) {
-
-//cuando genero el draggable le meto el background que cojo de las propiedades de animal
+  for( var i = 2; i < this.animals.length; i++ ) {
     $('<div>' + '<p>' + this.animals[i].name + '</p>' + '</div>')
       .data( 'animal', this.animals[i].extintionStatus )
       .attr( 'id', 'animal-'+ this.animals[i].name )
@@ -31,7 +29,6 @@ Cards.prototype.addAnimalsPile = function(animals) {
       } );
   }
 }
-
 // Pintamos cajas donde metemos animales
 Cards.prototype.addDrops = function(extinctionDrop) {
   for( var i = 0; i < this.extinctionDrop.length; i++ ) {
@@ -45,7 +42,6 @@ Cards.prototype.addDrops = function(extinctionDrop) {
       hoverClass: 'hovered',
       drop: this.handleCardDrop
     } );
-
   }
 }
 

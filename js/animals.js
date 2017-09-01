@@ -8,7 +8,7 @@ var animals = [
   { name: "unicornio", extintionStatus: "extinguido", image: "images/unicornio.png" },
   { name: "panda", extintionStatus: "vulnerable", image: "images/oso-panda-gigante-AM.png" },
   { name: "mariquita", extintionStatus: "riesgo-bajo", image: "images/mariquita-PM.png" },
-  //{ name: "hormiga", extintionStatus: "vulnerable" },
+  { name: "hormiga", extintionStatus: "riesgo-bajo", image: "images/hormiga.png"},
   { name: "anchoa", extintionStatus: "riesgo-bajo", image: "images/achoa-casi.png" },
   { name: "dodo", extintionStatus: "extinguido", image: "images/dodo-ex.png"},
   { name: "abeja", extintionStatus: "en-peligro", image: "images/abeja-PEL.png" }
