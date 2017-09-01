@@ -21,31 +21,6 @@ body {
 .countDown {
   margin-bottom: 50px;
 }
-#score {
-  font-size: 56px;
-}
-
-#timmerDown {
-  font-size: 56px;
-}
-
-#cardPile {
-  margin-top: 20px;
-}
-
-#cardPile div {
-  float: left;
-  width: 130px;
-  height: 150px;
-  margin: 16px;
-  margin-top: 37px;
-  padding-left: 10px;
-  background-size: cover;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  font-size: 16px;
-  transform: translateX(10px) rotate(10deg) translateY(5px);
-}
 
 .win {
   height: 380px;
@@ -61,6 +36,33 @@ body {
   background-position: center;
 }
 
+#score {
+  font-size: 56px;
+}
+
+#timmerDown {
+  font-size: 56px;
+}
+
+#cardPile {
+  margin-bottom: 50px;
+}
+#cardPile div {
+  float: left;
+  width: 130px;
+  height: 150px;
+  margin: 16px;
+  margin-top: 37px;
+  padding-left: 10px;
+  background-size: cover;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  font-size: 16px;
+  transform: translateX(10px) rotate(10deg) translateY(5px);
+}
+
+
+
 #cardPile p {
   padding-top: 155px;
   padding-left: 4px;
@@ -75,5 +77,12 @@ body {
     border: 10px solid white;
     background: #ddf;
     border-radius: 118px;
+  }
+}
+
+#cardSlots {
+  p {
+    text-transform: uppercase;
+    font-size: 22px;
   }
 }

@@ -10,7 +10,7 @@ function Cards(animals, extinctionDrop, countCorrectCards, game, score) {
 Cards.prototype.addAnimalsPile = function(animals) {
   animals.sort( function() { return Math.random() - .5 } );
 
-  for( var i = 0; i < this.animals.length; i++ ) {
+  for( var i = 1; i < this.animals.length; i++ ) {
 
 //cuando genero el draggable le meto el background que cojo de las propiedades de animal
     $('<div>' + '<p>' + this.animals[i].name + '</p>' + '</div>')
@@ -26,6 +26,7 @@ Cards.prototype.addAnimalsPile = function(animals) {
         stack: '#cardPile div',
         cursor: 'move',
         revert: true,
+        tolerance: "touch",
         scope: this.animals[i].extintionStatus
       } );
   }
@@ -34,7 +35,7 @@ Cards.prototype.addAnimalsPile = function(animals) {
 // Pintamos cajas donde metemos animales
 Cards.prototype.addDrops = function(extinctionDrop) {
   for( var i = 0; i < this.extinctionDrop.length; i++ ) {
-    $('<div>' + this.extinctionDrop[i] + '</div>')
+    $('<div>' + '<p>' + this.extinctionDrop[i] + '</p>' + '</div>')
       .data( 'dropBox', this.extinctionDrop[i] )
       .attr( 'class', 'col-md-3' )
       .appendTo( '#cardSlots' )
