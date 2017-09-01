@@ -1,6 +1,5 @@
-function Game(animals, player, cards, score) {
+function Game(animals, cards, score) {
   this.animals = animals;
-  this.player = player;
   this.cards = cards;
   this.score = 0;
   this.count = 30;

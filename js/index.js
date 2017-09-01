@@ -1,6 +1,6 @@
-var player = new Player();
+
 var cards = new Cards(animals);
-var game = new Game(animals, player, cards, score);
+var game = new Game(animals, cards, score);
 
 
 $(document).ready(function(){
