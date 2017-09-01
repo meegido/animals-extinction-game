@@ -47,6 +47,13 @@ body {
   transform: translateX(10px) rotate(10deg) translateY(5px);
 }
 
+.win {
+  height: 380px;
+  background-image: url('https://media.giphy.com/media/uSYQsJQWEv6O4/giphy.gif')
+  background-size: contain;
+  background-position: center;
+}
+
 #cardPile p {
   padding-top: 155px;
   padding-left: 4px;

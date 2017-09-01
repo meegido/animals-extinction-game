@@ -2,7 +2,7 @@ function Game(animals, cards, score) {
   this.animals = animals;
   this.cards = cards;
   this.score = 0;
-  this.count = 3;
+  this.count = 30;
 }
 
 Game.prototype.startGame = function(animals, cards) {
@@ -25,7 +25,7 @@ Game.prototype.countDown = function() {
     if(that.count <= 0) clearInterval(timmer)
     that.showTimmer();
   }, 1000)
-  this.count = 4;
+  this.count = 31;
 }
 
 Game.prototype.countCorrectCards = function() {
@@ -38,12 +38,12 @@ Game.prototype.showTimmer = function() {
 
 Game.prototype.win = function() {
   if(this.score === 10) {
-     $('#cardPile').css('background', 'red')
+     $('#cardPile').addClass('win').text("GANASTE!")
+
   }
   console.log(this.count);
-  if(this.count < 0){
-    console.log("HOLA");
-    $('#cardPile').css('background', 'blue')
+  if(this.count === 1){
+    $('#cardPile').addClass('loose')
   }
 }
 
