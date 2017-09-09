@@ -8,6 +8,7 @@ $(document).ready(function(){
   $('.start').on('click', function() {
     game.countDown();
     game.win();
+    game.loose();
   });
 
 });

@@ -19,12 +19,17 @@ Game.prototype.showScore = function() {
 
 Game.prototype.countDown = function() {
   var that = this;
+
   var timmer = setInterval(function(){
     that.win();
+    that.loose();
     that.count--;
     if(that.count <= 0) clearInterval(timmer)
+
+
     that.showTimmer();
   }, 1000)
+
   this.count = 31;
 }
 
@@ -37,16 +42,15 @@ Game.prototype.showTimmer = function() {
 }
 
 Game.prototype.win = function() {
-  if(this.score === 10) {
-     $('#cardPile').addClass('win').text('')
+  const maxScore = 10;
+  if(this.score !== maxScore) { return; }
 
-  }
-  console.log(this.count);
-  if(this.count === 1){
-    $('#cardPile').addClass('loose').text('')
-  }
+  $('#cardPile').addClass('win').text('')
 }
 
 Game.prototype.loose = function() {
+  const minCount = 0
+  if(this.count >= minCount){ return; }
 
+  $('#cardPile').addClass('loose').text('')
 }
