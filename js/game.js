@@ -14,7 +14,6 @@ Game.prototype.startGame = function(animals, cards) {
 
 Game.prototype.showScore = function() {
   $("#score").text(this.score)
-  console.log(this.score);
 }
 
 Game.prototype.countDown = function() {
@@ -22,15 +21,11 @@ Game.prototype.countDown = function() {
 
   var timmer = setInterval(function(){
     that.win();
-    that.loose();
     that.count--;
+    that.lose();
     if(that.count <= 0) clearInterval(timmer)
-
-
     that.showTimmer();
   }, 1000)
-
-  this.count = 31;
 }
 
 Game.prototype.countCorrectCards = function() {
@@ -48,9 +43,9 @@ Game.prototype.win = function() {
   $('#cardPile').addClass('win').text('')
 }
 
-Game.prototype.loose = function() {
+Game.prototype.lose = function() {
   const minCount = 0
-  if(this.count >= minCount){ return; }
+  if(this.count !== minCount){ return; }
 
   $('#cardPile').addClass('loose').text('')
 }
